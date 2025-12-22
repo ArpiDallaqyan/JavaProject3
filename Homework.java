@@ -7,7 +7,7 @@ public class Homework {
             int b = 5;
             int c = 3;
             // Find arithmetic mean
-            double mean = (a + b + c)/2f;
+            double mean = (a + b + c)/3f;
             System.out.println(" Arithmetic mean of a,b,c is "+ mean);
             // Recive three-digit number
             int ThreeDigitNumber = ((a*100) + (b*10) + c);
@@ -25,6 +25,9 @@ public class Homework {
             //(a+b)3
             int f = (a+b)*(a+b)*(a+b);
             System.out.println(f);
+
+        // New Homeworkes
+            System.out.println("New Homework");
 
         }
     }
