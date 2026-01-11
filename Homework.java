@@ -146,6 +146,15 @@ public class Homework {
         else
             System.out.println("Odd");
 
+
+        // User can login if hasEmail or HasPhone and user is not blocked
+        boolean hasEmail = true;
+        boolean hasPhone = false;
+        boolean isBlocked = false;
+        if(hasEmail | hasPhone & isBlocked)
+            System.out.println("User Can Login");
+
+
         }
     }
 
