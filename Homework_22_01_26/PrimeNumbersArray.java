@@ -9,10 +9,15 @@ public class PrimeNumbersArray {
             int num = array[i];
             int count = 2;
             boolean isPrime = true;
-            if (num <= 1){
-                isPrime = false;
+            if (num <= 1) {
+                continue;
             }
-            while(count <= array[i]/2){
+                if (num == 2 || num == 3){
+                    isPrime = true;
+                    primeNumberArray[index++] = num;
+                    continue;
+                }
+            while(count <= num/2){
                 if(num % count == 0){
                     isPrime = false;
                     break;
@@ -20,8 +25,8 @@ public class PrimeNumbersArray {
                 count++;
 
             }if (isPrime){
-                primeNumberArray[index] = num;
-                index++;
+                primeNumberArray[index++] = num;
+
             }
 
         }
