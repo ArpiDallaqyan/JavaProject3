@@ -18,6 +18,7 @@ public class StringMethods {
             }
         }
         return s;
+
     }
 
     static String cutString(String s, char ch, char ch1) {
@@ -35,6 +36,7 @@ public class StringMethods {
             }
 
         }
+        
         if (start == 0 || end == -1 || start >= end){
             System.out.println("There Is Not This Char");
             return " ";
