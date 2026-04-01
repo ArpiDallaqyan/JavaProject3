@@ -1,10 +1,8 @@
 package Homework_28_03_26;
 
 public class Figure {
-   private String color;
-   private String name;
-   int perimeter;
-   double area;
+   private final String color;
+   private final String name;
 
     public String getColor() {
         return color;

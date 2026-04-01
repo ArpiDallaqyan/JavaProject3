@@ -1,10 +1,18 @@
 package Homework_28_03_26;
 
 public class Circle extends Figure {
-    double r;
+    private double r;
 
     Circle(String color, String name, double r){
         super(color, name);
+        this.r = r;
+    }
+
+    public double getR() {
+        return r;
+    }
+
+    public void setR(double r) {
         this.r = r;
     }
 

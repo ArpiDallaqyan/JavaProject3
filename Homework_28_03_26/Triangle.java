@@ -2,16 +2,48 @@ package Homework_28_03_26;
 
 public class Triangle extends Figure {
 
-    double a;
-    double b;
-    double c;
-    double h;
+    private double a;
+    private double b;
+    private double c;
+    private double h;
 
     Triangle(String color, String name, double a, double b, double c){
         super(color, name);
         this.a = a;
         this.b = b;
         this.c = c;
+    }
+
+    public double getA() {
+        return a;
+    }
+
+    public void setA(double a) {
+        this.a = a;
+    }
+
+    public double getB() {
+        return b;
+    }
+
+    public void setB(double b) {
+        this.b = b;
+    }
+
+    public double getC() {
+        return c;
+    }
+
+    public void setC(double c) {
+        this.c = c;
+    }
+
+    public double getH() {
+        return h;
+    }
+
+    public void setH(double h) {
+        this.h = h;
     }
 
     @Override

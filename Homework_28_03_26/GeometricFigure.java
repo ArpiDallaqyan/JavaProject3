@@ -11,7 +11,7 @@ public class GeometricFigure {
         System.out.println("Perimeter Of Triangle: " + triangle.calculatePerimeter());
         System.out.println("Is Right Triangle: " + triangle.isRightTriangle());
 
-        Figure circle = new Circle("Yelow", "Circle", 7.7);
+        Figure circle = new Circle("Yellow", "Circle", 7.7);
         System.out.println("Area Of Circle: " + circle.calculateArea());
         System.out.println("Perimeter Of Circle: " + circle.calculatePerimeter());
 
