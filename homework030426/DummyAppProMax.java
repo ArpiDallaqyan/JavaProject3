@@ -6,7 +6,7 @@ package homework030426;
      DummyAppProMax(String[] members) {
         super(members);
         if (members.length > 8) {
-            throw new IllegalArgumentException("Not More Than 8 Members");
+            System.exit(0);
         }
         else {
             this.members = members;
