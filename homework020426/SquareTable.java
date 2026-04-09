@@ -1,4 +1,6 @@
+
 package homework020426;
+
 
 public class SquareTable extends Table{
     private final double side;

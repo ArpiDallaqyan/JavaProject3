@@ -1,3 +1,4 @@
+
 package homework020426;
 
 public class RectangleTable extends Table{
