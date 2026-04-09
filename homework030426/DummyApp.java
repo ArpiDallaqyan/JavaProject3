@@ -6,7 +6,6 @@ package homework030426;
         String[] members = new String[8];
         private String duration = "1 min 37 sec";
 
-
         DummyApp(String name1, String name2){
             this.name1 = name1;
             this.name2 = name2;
@@ -14,7 +13,6 @@ package homework030426;
             takeCall();
         }
         DummyApp(String[] members){
-
         }
 
         public void makeCall(){
