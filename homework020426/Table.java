@@ -1,5 +1,5 @@
-package homework020426;
 
+package homework020426
 public abstract class Table {
     private final int numberOfTablesLegs;
     private final String tablesLegsMaterial;
