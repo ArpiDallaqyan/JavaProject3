@@ -1,4 +1,5 @@
-package homework020426.Homework_02_04_26;
+
+package homework020426
 
 public class RectangleTable extends Table{
    private final double length;

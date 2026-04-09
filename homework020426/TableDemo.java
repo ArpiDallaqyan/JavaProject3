@@ -1,4 +1,6 @@
-package homework020426.Homework_02_04_26;
+
+package homework020426
+
 
 public class TableDemo {
     static void main(String[] args) {
