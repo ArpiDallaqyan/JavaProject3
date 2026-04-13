@@ -1,7 +1,6 @@
-package homework020426;
 
 public class RectangleTable extends Table{
-    private final double length;
+   private final double length;
     private final double width;
 
     RectangleTable(int numberOfTablesLegs, String tablesLegsMaterial, String tablesMaterial, double length, double width){

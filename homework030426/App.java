@@ -1,5 +1,4 @@
 package homework030426;
-
 public class App {
     static void main(String[] args) {
         DummyApp dummyApp = new DummyApp("Ani", "Liana");
@@ -20,4 +19,4 @@ public class App {
         System.out.println("Is Shared Display: " + dummyAppProMax.ShareDisplay());
         dummyAppProMax = null;
     }
-}
+

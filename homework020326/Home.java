@@ -39,7 +39,7 @@ public class Home {
     public void setBathroom(int bathroom){
         if (bathroom > 0){
             this.bathroom = bathroom;
-        }else {
+    }else {
             System.out.println("Not Possible Value For Building Home");
         }
     }
@@ -49,7 +49,8 @@ public class Home {
     public void setBalcony(int balcony){
         if (balcony > 0){
             this.balcony = balcony;
-        }else {
+      
+    }else {
             System.out.println("Not Possible Value For Building Home");
         }
     }
@@ -59,7 +60,8 @@ public class Home {
     public void setArea(double area){
         if (area > 0){
             this.area = area;
-        }else {
+     
+    }else {
             System.out.println("Not Possible Value For Building Home");
         }
     }
@@ -67,7 +69,3 @@ public class Home {
 
         return adress;
     }
-
-
-
-}

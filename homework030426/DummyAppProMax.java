@@ -1,9 +1,9 @@
 package homework030426;
 
-public class DummyAppProMax extends DummyAppPro {
-    boolean isSharedDisplay;
+    public class DummyAppProMax extends DummyAppPro {
+        boolean isSharedDisplay;
 
-    DummyAppProMax(String[] members) {
+     DummyAppProMax(String[] members) { 
         super(members);
         if (members.length > 8) {
             throw new IllegalArgumentException("Not More Than 8 Members");
@@ -19,4 +19,4 @@ public class DummyAppProMax extends DummyAppPro {
         return true;
     }
 
-}
+    }
