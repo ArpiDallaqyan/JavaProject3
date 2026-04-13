@@ -1,5 +1,5 @@
 
-package homework020426
+package homework020426;
 
 public class LargeFoldingTable extends RectangleTable {
 
