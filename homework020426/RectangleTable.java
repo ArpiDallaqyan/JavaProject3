@@ -1,6 +1,4 @@
 
-package homework020426;
-
 public class RectangleTable extends Table{
    private final double length;
     private final double width;
@@ -24,4 +22,3 @@ public class RectangleTable extends Table{
         return (getLength()) * (getWidth());
     }
 }
-

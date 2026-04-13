@@ -21,3 +21,4 @@ public class LargeFoldingTable extends RectangleTable {
 
     }
 }
+

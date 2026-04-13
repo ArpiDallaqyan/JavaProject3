@@ -25,3 +25,4 @@ public abstract class Table {
 
     abstract public double getArea();
 }
+
