@@ -7,7 +7,7 @@ public class DummyAppPro extends DummyApp {
         super(members);
         if (members.length > 8) {
             throw new IllegalArgumentException("Not More Than 8 Members");
-        else {
+        } else {
             this.members = members;
         }
     }
@@ -26,4 +26,4 @@ public class DummyAppPro extends DummyApp {
         System.out.println("You are turn off video");
         isCameraTurnOn = false;
     }
-
+}
