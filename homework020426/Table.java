@@ -6,7 +6,7 @@ public abstract class Table {
     private final String tablesLegsMaterial;
     private final String tablesMaterial;
 
-    Table(int numberOfTablesLegs, String tablesLegsMaterial, String tablesMaterial){
+    protected Table(int numberOfTablesLegs, String tablesLegsMaterial, String tablesMaterial){
         this.numberOfTablesLegs = numberOfTablesLegs;
         this.tablesLegsMaterial = tablesLegsMaterial;
         this.tablesMaterial = tablesMaterial;

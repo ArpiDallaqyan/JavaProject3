@@ -6,7 +6,7 @@ public class LargeFoldingTable extends RectangleTable {
     private final double areaOfLargeTable;
 
     LargeFoldingTable(int numberOfTablesLegs, String tablesLegsMaterial,
-                      String tablesMaterial, double length, double width, double areaOfLargeTable){
+                      String tablesMaterial, double length, double width, double areaOfLargeTable) {
         super(numberOfTablesLegs, tablesLegsMaterial, tablesMaterial, length, width);
         this.areaOfLargeTable = areaOfLargeTable;
     }

@@ -1,6 +1,8 @@
 package homework020426;
 
-public class RectangleTable extends Table{
+import homework020426.Table;
+
+public class RectangleTable extends Table {
    private final double length;
     private final double width;
 
