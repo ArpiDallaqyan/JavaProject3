@@ -8,7 +8,7 @@ public class Home {
     private double area;
     private String adress;
 
-    public Home(int room, boolean welcome, int bathroom, int balcony, double area, String adress){
+    public Home(int room, boolean welcome, int bathroom, int balcony, double area, String adress) {
         setRoom(room);
         this.entrance = welcome;
         setBathroom(bathroom);
@@ -17,12 +17,14 @@ public class Home {
         this.adress = adress;
     }
 
-    public Home(){
+    public Home() {
 
     }
-    public int getRoom(){
+
+    public int getRoom() {
         return room;
     }
+
     public void setRoom(int room) {
         if (room > 0) {
             this.room = room;
@@ -30,42 +32,51 @@ public class Home {
             System.out.println("Not Possible Value For Building Home");
         }
     }
-    public boolean getEntrance(){
+
+    public boolean getEntrance() {
         return entrance;
     }
-    public int getBathroom(){
+
+    public int getBathroom() {
         return bathroom;
     }
-    public void setBathroom(int bathroom){
-        if (bathroom > 0){
+
+    public void setBathroom(int bathroom) {
+        if (bathroom > 0) {
             this.bathroom = bathroom;
-    }else {
+        } else {
             System.out.println("Not Possible Value For Building Home");
         }
     }
-    public int getBalcony(){
+
+    public int getBalcony() {
         return balcony;
     }
-    public void setBalcony(int balcony){
-        if (balcony > 0){
+
+    public void setBalcony(int balcony) {
+        if (balcony > 0) {
             this.balcony = balcony;
-      
-    }else {
+
+        } else {
             System.out.println("Not Possible Value For Building Home");
         }
     }
-    public double getArea(){
+
+    public double getArea() {
         return area;
     }
-    public void setArea(double area){
-        if (area > 0){
+
+    public void setArea(double area) {
+        if (area > 0) {
             this.area = area;
-     
-    }else {
+
+        } else {
             System.out.println("Not Possible Value For Building Home");
         }
     }
-    public String getAdress(){
+
+    public String getAdress() {
 
         return adress;
     }
+}
