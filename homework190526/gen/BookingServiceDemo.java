@@ -8,10 +8,11 @@ public class BookingServiceDemo {
         findAvailableRoom(rooms, -9);
     }
 
-    public static <T extends Comparable<T>> void findAvailableRoom(T [] arr, T room){
+    public static <T> void findAvailableRoom(T [] arr, T room){
         for (int i = 0; i < arr.length; i++) {
-            if (arr[i].compareTo(room) == 0){
+            if (arr[i].equals(room)){
                 System.out.println("You Are Successfully Booked Room " + room);
+                return;
             }
         }
         System.out.println("This Room Is Not Available");

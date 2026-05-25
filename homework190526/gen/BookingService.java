@@ -1,6 +1,8 @@
 package homework190526.gen;
 
-public class BookingService implements Comparable<BookingService> {
+import java.util.Objects;
+
+public class BookingService  {
     private int numberOfRoom;
     BookingService(int numberOfRoom){
         this.numberOfRoom = numberOfRoom;
@@ -15,7 +17,12 @@ public class BookingService implements Comparable<BookingService> {
     }
 
     @Override
-    public int compareTo(BookingService o) {
-        return Integer.compare(this.numberOfRoom, o.numberOfRoom);
+    public int hashCode() {
+        return Objects.hashCode(numberOfRoom);
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
     }
 }
