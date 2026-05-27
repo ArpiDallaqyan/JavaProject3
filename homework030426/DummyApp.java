@@ -6,7 +6,6 @@ public class DummyApp {
     String[] members = new String[8];
     private String duration = "1 min 37 sec";
 
-
     DummyApp(String name1, String name2){
         this.name1 = name1;
         this.name2 = name2;
@@ -16,7 +15,6 @@ public class DummyApp {
     DummyApp(String[] members){
 
     }
-
     public void makeCall(){
         System.out.println("You are make the call");
     }

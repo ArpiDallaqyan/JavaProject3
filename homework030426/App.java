@@ -19,3 +19,4 @@ public class App {
         System.out.println("Is Shared Display: " + dummyAppProMax.ShareDisplay());
         dummyAppProMax = null;
     }
+}
