@@ -21,7 +21,6 @@ public class DummyAppPro extends DummyApp {
         isCameraTurnOn = true;
 
     }
-
     public void turnOffVideo() {
         System.out.println("You are turn off video");
         isCameraTurnOn = false;
