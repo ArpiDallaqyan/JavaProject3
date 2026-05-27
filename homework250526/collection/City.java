@@ -1,24 +1,38 @@
 package homework250526.collection;
 
+import java.util.Objects;
+
 public class City implements Comparable<City> {
     private String region;
     private String country;
     private String name;
-    City(String region, String country, String name){
-        this.region = region;
+    City(String country, String region, String name){
         this.country = country;
+        this.region = region;
         this.name = name;
     }
 
     @Override
     public int compareTo(City o) {
-    if (this.region.compareTo(o.region) > 0){
+        if (this.country.compareTo(o.country) > 0){
+            return this.country.compareTo(o.country);
+        }
+        if (this.region.compareTo(o.region) > 0){
         return this.region.compareTo(o.region);
     }
-    if (this.country.compareTo(o.country) > 0){
-        return this.country.compareTo(o.country);
+        return this.name.compareTo(o.name);
     }
-    return this.name.compareTo(o.name);
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        City city = (City) o;
+        return Objects.equals(region, city.region) && Objects.equals(country, city.country) && Objects.equals(name, city.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(region, country, name);
     }
 
     @Override
