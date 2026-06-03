@@ -5,9 +5,9 @@ import java.util.Objects;
 public class Song {
     private String singer;
     private String title;
-    private int year;
+    private String year;
 
-    Song(String singer, String title, int year){
+    Song(String singer, String title, String year){
         this.singer = singer;
         this.title = title;
         this.year = year;
@@ -16,13 +16,9 @@ public class Song {
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
         Song song = (Song) o;
-        return year == song.year && Objects.equals(singer, song.singer) && Objects.equals(title, song.title);
+        return  Objects.equals(singer, song.singer) && Objects.equals(title, song.title);
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(singer, title, year);
-    }
 
     @Override
     public String toString() {
@@ -45,11 +41,8 @@ public class Song {
         this.title = title;
     }
 
-    public int getYear() {
+    public String getYear() {
         return year;
     }
 
-    public void setYear(int year) {
-        this.year = year;
-    }
 }
