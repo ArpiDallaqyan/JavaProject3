@@ -8,4 +8,5 @@ public enum ATM_State {
     TRANSACTION_IN_PROGRESS,
     BLOCKED,
     CARD_EJECTED,
+    INVALID_TRANSACTION,
 }

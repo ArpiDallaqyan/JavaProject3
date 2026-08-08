@@ -1,6 +1,6 @@
 package homework060826;
 
-public enum DecisionState {
+public enum DecisionState  {
     DENIED_ACCOUNT_BLOCKED,
     DENIED_INVALID_AMOUNT,
     DENIED_INSUFFICIENT_BALANCE,

@@ -3,6 +3,7 @@ package homework060826;
 public class ATM_Machine {
 
     private Card card;
+    private boolean isActiveCard;
 
     ATM_Machine(Card card){
         this.card = card;
@@ -12,80 +13,68 @@ public class ATM_Machine {
         return card;
     }
 
-    private String currentState = ATM_State.IDLE.name();
+    private ATM_State currentState = ATM_State.IDLE;
     private int counter = 0;
 
-    public String insertCard(){
-        if ((!currentState.equals(ATM_State.IDLE.name()))){
-            return "Invalid Transaction";
+    public ATM_State insertCard(Card card){
+        if ((!currentState.equals(ATM_State.IDLE))){
+            return ATM_State.INVALID_TRANSACTION;
         }
-        currentState = ATM_State.CARD_INSERTED.name();
+        currentState = ATM_State.CARD_INSERTED;
         return currentState;
     }
-    public String enterPin(boolean isCorrect) {
-        if (!(currentState.equals(ATM_State.CARD_INSERTED.name())) & !(currentState.equals(ATM_State.PIN_VERIFICATION.name()))) {
-            return "Invalid Transition";
+    public ATM_State enterPin(int pin) {
+        if (!(currentState.equals(ATM_State.CARD_INSERTED)) & !(currentState.equals(ATM_State.PIN_VERIFICATION))) {
+            return ATM_State.INVALID_TRANSACTION;
         }
-        if (isCorrect) {
-            currentState = ATM_State.AUTHENTICATED.name();
+        if (card.getPin() == pin) {
+            currentState = ATM_State.AUTHENTICATED;
             counter = 0;
             return currentState;
         }
-        currentState = ATM_State.PIN_VERIFICATION.name();
+        currentState = ATM_State.PIN_VERIFICATION;
         counter++;
         if (counter == 3) {
-            currentState = ATM_State.BLOCKED.name();
+            isActiveCard = false;
+            currentState = ATM_State.BLOCKED;
         }
-        return currentState;
-
-    }
-
-    public String startedTransaction(){
-        if (!(currentState.equals(ATM_State.AUTHENTICATED.name()))){
-            return "Invalid Transaction";
-        }
-        currentState = ATM_State.TRANSACTION_IN_PROGRESS.name();
-        return currentState;
-    }
-    public String completeTransaction(){
-        if (!(currentState.equals(ATM_State.TRANSACTION_IN_PROGRESS.name()))){
-            return "Invalid Transaction";
-        }
-        currentState = ATM_State.AUTHENTICATED.name();
-        return currentState;
-    }
-    public String ejectCard(){
-        if(!(currentState.equals(ATM_State.AUTHENTICATED.name())) &&
-                !(currentState.equals(ATM_State.PIN_VERIFICATION.name())) &&
-                !(currentState.equals(ATM_State.BLOCKED.name()))){
-            return "Invalid Transaction";
-        }
-        currentState = ATM_State.CARD_EJECTED.name();
         return currentState;
     }
 
-    public String reset(){
-        if (currentState.equals(ATM_State.CARD_EJECTED.name())){
-            currentState = ATM_State.IDLE.name();
+    public ATM_State startedTransaction(){
+        if (!(currentState.equals(ATM_State.AUTHENTICATED))){
+            return ATM_State.INVALID_TRANSACTION;
+        }
+        currentState = ATM_State.TRANSACTION_IN_PROGRESS;
+        return currentState;
+    }
+    public ATM_State completeTransaction(){
+        if (!(currentState.equals(ATM_State.TRANSACTION_IN_PROGRESS))){
+            return ATM_State.INVALID_TRANSACTION;
+        }
+        currentState = ATM_State.AUTHENTICATED;
+        return currentState;
+    }
+    public ATM_State ejectCard(){
+        if(!(currentState.equals(ATM_State.AUTHENTICATED) &&
+                !(currentState.equals(ATM_State.PIN_VERIFICATION)) &&
+                !(currentState.equals(ATM_State.BLOCKED)))){
+            return ATM_State.INVALID_TRANSACTION;
+        }
+        currentState = ATM_State.CARD_EJECTED;
+        return currentState;
+    }
+
+    public ATM_State reset(){
+        if (currentState.equals(ATM_State.CARD_EJECTED)){
+            currentState = ATM_State.IDLE;
             return currentState;
 
         }
-        return "Invalid Transaction";
+        return ATM_State.INVALID_TRANSACTION;
     }
 
-    public String checksConditions(boolean c1, boolean c2, boolean c3, boolean c4){
-        if (!c1 ){
-            return DecisionState.DENIED_ACCOUNT_BLOCKED.name();
-        }
-        if (!c2){
-            return DecisionState.DENIED_INVALID_AMOUNT.name();
-        }
-        if (!c3){
-            return DecisionState.DENIED_INSUFFICIENT_BALANCE.name();
-        }
-        if (!c4){
-            return DecisionState.DENIED_LIMIT_EXCEEDED.name();
-        }
-        return DecisionState.APPROVED.name();
+    public boolean isActiveCard() {
+        return isActiveCard;
     }
 }

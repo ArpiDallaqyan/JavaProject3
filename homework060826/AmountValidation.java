@@ -5,6 +5,4 @@ public enum AmountValidation {
     TOO_HIGH,
     TOO_LOW,
     NOT_MULTIPLE_OFF_100,
-
-
 }

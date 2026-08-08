@@ -38,7 +38,6 @@ public class Card {
     public String getCardNumber() {
         return cardNumber;
     }
-
     public int getPin() {
         return pin;
     }
